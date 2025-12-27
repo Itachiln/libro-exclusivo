@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Libro exclusivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --negro:#141414; --rojo:#e50914; --panel:#1a1a1a; }
+    body { margin:0; background:var(--negro); color:#fff; font-family:system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }
+    .fondo {
+      position:fixed; inset:0; z-index:-1; overflow:hidden;
+      background:radial-gradient(1200px 500px at 80% -20%, rgba(229,9,20,.18), transparent),
+                 radial-gradient(900px 400px at -10% 110%, rgba(229,9,20,.12), transparent),
+                 linear-gradient(180deg, #141414, #0f0f0f 40%, #141414);
+    }
+    .burbuja {
+      position:absolute; border-radius:50%; background:rgba(229,9,20,.16);
+      animation:flotar 10s infinite alternate ease-in-out;
+    }
+    .b1 { width:100px; height:100px; top:8%; left:6%; }
+    .b2 { width:140px; height:140px; top:70%; left:80%; animation-duration:13s; }
+    .b3 { width:70px; height:70px; top:45%; left:20%; animation-duration:11s; }
+    @keyframes flotar { from { transform:translateY(0) translateX(0); } to { transform:translateY(-24px) translateX(16px); } }
+    .contenedor { width:92%; max-width:800px; margin:0 auto; padding:24px 0 60px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 0; position:sticky; top:0; backdrop-filter:saturate(120%) blur(6px); }
+    .marca { color:var(--rojo); font-weight:800; letter-spacing:.6px; }
+    .panel { background:var(--panel); border-radius:16px; padding:22px; box-shadow:0 18px 50px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04); }
+    h1, h2 { color:var(--rojo); margin:16px 0 8px; }
+    p { color:#eaeaea; line-height:1.7; margin:10px 0; }
+    .seccion { margin:26px 0; }
+    .descargar { display:inline-block; margin:20px 0; color:#fff; background:var(--rojo); padding:12px 16px; border-radius:10px; font-weight:800; text-decoration:none; }
+    .nota { color:#bbb; font-size:.95rem; margin-top:6px; }
+    .rating { display:flex; gap:6px; justify-content:center; margin-top:14px; }
+    .rating input { display:none; }
+    .estrella { font-size:2rem; color:#444; cursor:pointer; transition:color .15s ease; }
+    input:checked ~ label.estrella,
+    label.estrella:hover,
+    label.estrella:hover ~ label.estrella { color:var(--rojo); }
+    footer { margin-top:28px; color:#9a9a9a; font-size:.9rem; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="fondo"><div class="burbuja b1"></div><div class="burbuja b2"></div><div class="burbuja b3"></div></div>
+  <div class="contenedor">
+    <header>
+      <div class="marca">Recuerdos — Edición exclusiva</div>
+      <div class="acciones"><a href="/salir" style="color:#fff; background:#e50914; border-radius:8px; padding:10px 14px; text-decoration:none; font-weight:700;">Salir</a></div>
+    </header>
+    <div class="panel">
+      <div class="seccion">
+        <h1>Prólogo</h1>
+        <h2>El aula encantada</h2>
+        <p>Dicen que los recuerdos son como estrellas: algunos se apagan, otros siguen brillando. El nuestro nació en un aula cualquiera, entre risas y juegos, y se convirtió en un secreto que aún ilumina la memoria. No fue una historia de amor, fue una historia de aquella época mágica, de esas que se guardan porque fueron únicas.</p>
+      </div>
+      <div class="seccion">
+        <h2>Capítulo 1 — La apuesta en el aula</h2>
+        <p>El aula parecía un lugar cualquiera, con pupitres marcados por nombres y paredes que guardaban secretos. Pero aquel día se convirtió en un escenario distinto. Entre risas y voces, las niñas inventaron una apuesta: quién lograría llamar mi atención.</p>
+        <p>Las bromas caían sobre mí como lluvia ligera: ‘que si era bonito’, ‘que si me gustaba alguien’. Yo sonreía con pena, sin atreverme a decir nada. Pero entonces apareciste tú, y el juego dejó de ser solo un juego.</p>
+        <p>No recuerdo cada palabra, pero sí recuerdo la sensación: como si en ese instante ya hubieras ganado, porque desde el momento en que te conocí, todo cambió. La apuesta se transformó en conversación, y la conversación en un puente invisible que nos unía.</p>
+        <p>Ese fue el primer hechizo de aquella época mágica: un reto inventado por tus amigas que terminó siendo el inicio de nuestra historia.</p>
+      </div>
+      <div class="seccion">
+        <h2>Capítulo 2 — El abrazo nube</h2>
+        <p>Hay abrazos que pesan, que aprietan, que se olvidan. El tuyo no. El tuyo era distinto: ligero, suave, como si en tus brazos se escondiera una nube. Cada vez que te rodeaba con mis manos, sentía que el mundo se detenía, que la timidez se disolvía y que aquella época mágica tenía sentido.</p>
+        <p>No era un gesto cualquiera, era un secreto compartido. Y aunque nadie más lo entendiera, yo sabía que ese abrazo era un refugio, un lugar donde todo parecía posible.</p>
+        <p>Quizás por eso aún lo recuerdo: porque fue más que un abrazo, fue un hechizo que convirtió la rutina en magia.</p>
+      </div>
+      <div class="seccion">
+        <h2>Capítulo 3 — La escoba traviesa</h2>
+        <p>No todo era magia suave. A veces tu risa se convertía en travesura, y la escoba era tu espada. Me corrías por el aula como si fueras una bruja juguetona, intentando pincharme, y yo huía con fastidio disfrazado de risa.</p>
+        <p>La verdad es que no me gustaba, pero al mismo tiempo sí: porque cada intento tuyo era una señal de que pensabas en mí, de que me buscabas. No eras una molestia, eras la chispa que hacía que la rutina se volviera inolvidable.</p>
+        <p>Quizás por eso aún lo recuerdo: porque tus juegos eran parte de tu esencia, y yo aprendí que incluso lo que parecía incomodar era, en realidad, un regalo de tu atención.</p>
+      </div>
+      <div class="seccion">
+        <h2>Capítulo 4 — La sonrisa y la pizarra</h2>
+        <p>Había momentos en que el aula se llenaba de silencio, y tú te distraías mirando la pizarra como si fuera un mundo aparte. Yo, mientras tanto, me distraía mirándote a ti.</p>
+        <p>Tu sonrisa aparecía de repente, como un relámpago de alegría, y todo cambiaba. Era una sonrisa que no necesitaba palabras, que iluminaba incluso los días más rutinarios.</p>
+        <p>Esa sonrisa era tu magia más poderosa: la que me hacía olvidar las clases y me recordaba que aquella época mágica también podía ser un cuento.</p>
+      </div>
+      <div class="seccion">
+        <h2>Capítulo 5 — Las gradas y los tatuajes</h2>
+        <p>En las gradas descubrí otra parte de ti. Tus ojos se llenaban de celos silenciosos, como si temieras perder algo que nunca se dijo en voz alta. Esa mirada era un misterio, un conjuro que me dejaba pensando.</p>
+        <p>Y luego estaban los tatuajes de lapicero, dibujos improvisados en la piel que se borraban con el tiempo, pero que en mi memoria quedarían grabados como símbolos de nuestros recuerdos. Quizás nunca supiste cuánto me gustaba mirarlos, porque eran como señales secretas de que esa época mágica nos pertenecía.</p>
+        <p>Cada gesto tuyo, cada juego, cada distracción, fue un capítulo de un cuento que no necesita final feliz, porque su magia está en el recuerdo.</p>
+        <p>Así fue nuestra historia: una mezcla de travesuras y ternura, de risas y silencios, de estrellas que aún brillan en la memoria.</p>
+      </div>
+
+      <div class="seccion">
+        <h2>Descarga y valoración</h2>
+        {% if hay_pdf %}
+          <a class="descargar" href="/descargar">⬇ Descargar libro en PDF</a>
+          <div class="nota">Si no se abre, intenta nuevamente: a veces el amor también necesita paciencia.</div>
+        {% else %}
+          <div class="nota">El PDF aún no está disponible. Cuando lo subas a <code>/static/libro.pdf</code>, aparecerá aquí el botón de descarga.</div>
+        {% endif %}
+
+        <form method="POST" style="margin-top:16px;">
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5"><label class="estrella" for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label class="estrella" for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label class="estrella" for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label class="estrella" for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label class="estrella" for="star1">★</label>
+          </div>
+          <button type="submit" style="margin-top:12px; background:#e50914; color:#fff; border:none; border-radius:8px; padding:10px 14px; font-weight:700;">Guardar valoración</button>
+          <div class="nota">Tu elección se guarda de forma discreta.</div>
+        </form>
+      </div>
+
+      <footer>Visita nº {{ visitas }} · Estilo elegante inspirado en Netflix</footer>
+    </div>
+  </div>
+</body>
+</html>
